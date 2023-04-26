@@ -23,8 +23,9 @@ export const SkillsSection: React.FC = () => {
 
   useEffect(() => {
     const fetchSkills = async () => {
+      console.log(import.meta.env.VITE_FETCH_URL)
       try {
-        const response = await axios.get('http://localhost:3000/api/skills/groupbycategory');
+        const response = await axios.get(`${import.meta.env.VITE_FETCH_URL}/skills/groupbycategory`);
         setCategories(response.data);
       } catch (error) {
         console.error('Error fetching skills:', error);

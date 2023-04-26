@@ -10,7 +10,7 @@ const AboutMe: React.FC = () => {
   useEffect(() => {
     const fetchContext = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/api/about');
+        const response = await axios.get(`${import.meta.env.VITE_FETCH_URL}/about`);
         setAboutData(response.data);
       } catch (error) {
         console.error('Error fetching content for about section:', error);
