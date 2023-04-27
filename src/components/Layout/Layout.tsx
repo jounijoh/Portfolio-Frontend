@@ -14,8 +14,9 @@ interface LayoutProps {
 
 export const Layout: React.FC<LayoutProps> = ({ children }) => {
   const [homepageRef, homepageInView] = useInView({ threshold: 0.1 });
-  const [aboutRef, aboutInView] = useInView({ threshold: 0.1 });
-  const [skillsRef, skillsInView] = useInView({ threshold: 0.1 });
+  const [aboutRef, aboutInView] = useInView({ threshold: 0.5 });
+  const [skillsRef, skillsInView] = useInView({ threshold: 0.5 });
+  const [projectsRef, projectsInView] = useInView({ threshold: 0.5 });
   return (
 
     <LayoutContainer id="homepage">
@@ -34,8 +35,10 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
           <AnimatedSection id="skills" ref={skillsRef} inView={skillsInView}>
             <SkillsSection />
           </AnimatedSection>
-
+        
+          <AnimatedSection id="projects" ref={projectsRef} inView={projectsInView}>
         <ProjectsSection/>
+        </AnimatedSection>
       </MainContent>
     </LayoutContainer>
 
