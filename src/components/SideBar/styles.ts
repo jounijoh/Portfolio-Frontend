@@ -14,9 +14,9 @@ export const Sidebar = styled.aside<{ isVisible: boolean }>`
   //border: 1px solid ${colors.secondary.cyan};
 
   @media (max-width: 768px) {
-    padding-top: 6.5rem;
+    padding-top: 4rem;
     padding-left: 1rem;
-    padding-right: 1.5rem;
+    padding-right: 1rem;
   }
   @media (max-width: 768px) {
     //set visibility to hidden
