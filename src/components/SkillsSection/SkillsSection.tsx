@@ -23,7 +23,7 @@ export const SkillsSection: React.FC = () => {
 
   useEffect(() => {
     const fetchSkills = async () => {
-      console.log(import.meta.env.VITE_VERCEL_FETCH_URL)
+     
       try {
         const response = await axios.get(`${import.meta.env.VITE_VERCEL_FETCH_URL}/skills/groupbycategory`);
         setCategories(response.data);
