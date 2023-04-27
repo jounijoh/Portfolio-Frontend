@@ -15,13 +15,11 @@ export const Sidebar = styled.aside<{ isVisible: boolean }>`
 
   @media (max-width: 768px) {
     padding-top: 4rem;
-    padding-left: 1rem;
+    padding-left: 0.5rem;
     padding-right: 1rem;
-  }
-  @media (max-width: 768px) {
     //set visibility to hidden
-
   }
+
 `;
 
 

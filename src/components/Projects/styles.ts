@@ -7,6 +7,7 @@ export const ProjectsSectionContainer = styled.div`
   align-items: flex-start;
   justify-content: center;
   padding: 2rem;
+  margin-top: 10rem;
 `;
 
 export const ProjectContainer = styled.div<{ reverse?: boolean }>`

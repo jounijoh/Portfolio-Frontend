@@ -3,7 +3,8 @@ import { colors } from '../../global/Colors';
 
 
 export const SkillSection = styled.section`
-  height: 70vh;
+  height: 50vh;
+  margin-top: 10rem;
 `;  
 
 export const SectionTitle = styled.h2`
