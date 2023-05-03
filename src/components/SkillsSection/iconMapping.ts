@@ -1,24 +1,11 @@
 import { IconType } from 'react-icons';
 import { FaJsSquare, FaNodeJs, } from 'react-icons/fa';
-import { SiTypescript, SiReactrouter,SiExpress, SiMariadb, SiMongodb,  SiFirebase, SiMicrosoftazure } from 'react-icons/si';
-import { DiJava, DiPython, DiReact, DiHtml5, DiGithubBadge } from "react-icons/di";
+import { SiTypescript, SiStyledcomponents, SiReactrouter ,SiExpress, SiMariadb, SiMongodb,  SiFirebase, SiMicrosoftazure, SiTailwindcss } from 'react-icons/si';
+import { DiJava, DiPython, DiReact, DiScrum, DiHtml5, DiGithubBadge, DiCss3, } from "react-icons/di";
 import { TbSql } from 'react-icons/tb';
 
-export type IconMapping = {
-    React: IconType;
-    JavaScript: IconType;
-    TypeScript: IconType;
-    HTML5: IconType;
-    'React Native': IconType;
-    'Node.js': IconType;
-    Express: IconType;
-    MongoDB: IconType;
-    Firebase: IconType;
-    Java: IconType;
-    SQL: IconType;
-};
 
-export const iconMapping: { [key: string]: IconType } & IconMapping = {
+export const iconMapping: { [key: string]: IconType } = {
     React: DiReact,
     JavaScript: FaJsSquare,
     TypeScript: SiTypescript,
@@ -33,4 +20,9 @@ export const iconMapping: { [key: string]: IconType } & IconMapping = {
     Azure: SiMicrosoftazure,
     Git: DiGithubBadge,
     SQL: TbSql,
+    Mongoose: SiMongodb,
+    Scrum: DiScrum,
+    CSS: DiCss3,
+    'Tailwind CSS': SiTailwindcss,
+    'Styled Components': SiStyledcomponents,
 };

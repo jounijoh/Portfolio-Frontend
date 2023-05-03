@@ -57,8 +57,8 @@ const fadeInScaleUp = keyframes`
 export const AnimatedSection = styled.section<{ inView: boolean }>`
   opacity: 0;
   animation: ${({ inView }) =>
-    inView ? css`${fadeInUp} 1s forwards, ${fadeInScaleUp} 1s forwards` : 'none'};
-  //scroll-margin-top: 10rem;
+    inView ? css`${fadeInUp} 0.3s forwards, ${fadeInScaleUp} 0.3s forwards` : 'none'};
+  scroll-margin-top: 10rem;
 
 `;
 

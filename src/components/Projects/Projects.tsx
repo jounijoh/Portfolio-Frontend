@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { ProjectsSectionContainer, ProjectsTitle } from './styles';
+import { ProjectsContent, ProjectsSectionContainer, ProjectsTitle } from './styles';
 import { Project } from './Project';
 import { CyanWrap } from '../../global/Colors';
 import axios from 'axios';
@@ -28,6 +28,7 @@ export const ProjectsSection: React.FC = () => {
       <ProjectsTitle>
         My Creations<CyanWrap>.</CyanWrap>
       </ProjectsTitle>
+      <ProjectsContent>This section is under constuction... Thank you for your patience.</ProjectsContent>
       {projects.map((project, index) => (
         <Project
           key={project._id}

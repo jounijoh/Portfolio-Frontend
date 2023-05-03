@@ -1,6 +1,9 @@
 import React from 'react';
 import { ProjectContainer, ProjectImage, ProjectInfo } from './styles';
 import { SkillType } from '../../types';
+import { SkillIcon } from '../SkillsSection/styles';
+import { SkillsContainer } from './styles';
+import { iconMapping } from '../SkillsSection/iconMapping';
 
 interface Link {
   title?: string;
@@ -26,12 +29,12 @@ export const Project: React.FC<ProjectProps> = ({ name, description, skills, ima
         <p>{description}</p>
         {skills && (
           <>
-            <h4>Skills:</h4>
-            <ul>
+            <h4>Technologies used:</h4>
+            <SkillsContainer>
               {skills.map((skill, index) => (
-                <li key={index}>{skill.name}</li>
+                <SkillIcon as={iconMapping[skill.name]} title={skill.name} />
               ))}
-            </ul>
+            </SkillsContainer>
           </>
         )}
         {links && (

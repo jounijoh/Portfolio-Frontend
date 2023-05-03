@@ -1,20 +1,21 @@
 import styled from 'styled-components';
 import { colors } from '../../global/Colors';
 
-export const AboutMeContainer = styled.div`
-    height: 50vh;
+export const AboutMeContainer = styled.section`
+    height: 40vh;
+    
 `;
 
 
 export const AboutMeTitle = styled.h2`
-  font-size: clamp(20px, 4vw, 44px);
+  font-size: ${({ theme }) => theme.fontSizes.h2};
   margin-bottom: 1rem;
   margin-top: 4rem;
 `;
 
 
 export const AboutMeContent = styled.p`
-  font-size: 1rem;
+  font-size: ${({ theme }) => theme.fontSizes.body};
   color: ${colors.text.lightPurple};
-  line-height: 1.5;
+  line-height: ${({ theme }) => theme.lineHeights.body};
 `;

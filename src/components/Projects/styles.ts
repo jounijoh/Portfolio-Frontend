@@ -5,9 +5,8 @@ export const ProjectsSectionContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
   padding: 2rem;
-  margin-top: 10rem;
+  height: 70vh;
 `;
 
 export const ProjectContainer = styled.div<{ reverse?: boolean }>`
@@ -16,6 +15,7 @@ export const ProjectContainer = styled.div<{ reverse?: boolean }>`
   justify-content: space-between;
   align-items: center;
   margin-bottom: 2rem;
+  width: 70%;
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -37,19 +37,38 @@ export const ProjectImage = styled.img`
 
 export const ProjectInfo = styled.div`
   width: 50%;
-
+  font-size: ${({ theme }) => theme.fontSizes.body};
+  color: ${colors.text.lightPurple};
   @media (max-width: 768px) {
     width: 100%;
   }
 `;
 export const ProjectsTitle = styled.h2`
-  font-size: clamp(20px, 4vw, 44px);
+  font-size: ${({ theme }) => theme.fontSizes.h2};
   margin-bottom: 1rem;
   margin-top: 4rem;
 `;
 
 
 export const ProjectsContent = styled.p`
-  font-size: clamp(14px, 1.5vw, 18px);
+  font-size: ${({ theme }) => theme.fontSizes.body};
+  color: ${colors.text.lightPurple};
   line-height: 1.5;
+`;
+
+export const SkillIcon = styled.span`
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  //margin-right: 0.5rem;
+`;
+
+export const SkillsContainer = styled.div`
+  display: flex;
+  width: auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  
+  @media (max-width: 768px) {
+ 
+  }
 `;

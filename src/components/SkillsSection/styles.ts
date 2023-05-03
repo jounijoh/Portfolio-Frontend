@@ -4,12 +4,12 @@ import { colors } from '../../global/Colors';
 
 export const SkillSection = styled.section`
   height: 50vh;
-  margin-top: 10rem;
 `;  
 
 export const SectionTitle = styled.h2`
-  font-size: 2rem;
+font-size: ${({ theme }) => theme.fontSizes.h2};
   margin-bottom: 1rem;
+  margin-top: 2rem;
 `;
 
 export const CategorySection = styled.section`
@@ -72,7 +72,7 @@ export const Skill = styled.div<{ isActive: boolean }>`
 
   &:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 10px ${colors.secondary.lightGray};
+    box-shadow: 0 0 5px ${colors.secondary.lightGray};
   }
 
   @media (max-width: 768px) {

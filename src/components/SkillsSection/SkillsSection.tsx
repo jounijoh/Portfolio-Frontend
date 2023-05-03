@@ -23,7 +23,7 @@ export const SkillsSection: React.FC = () => {
 
   useEffect(() => {
     const fetchSkills = async () => {
-     
+
       try {
         const response = await axios.get(`${import.meta.env.VITE_VERCEL_FETCH_URL}/skills/groupbycategory`);
         setCategories(response.data);
@@ -43,27 +43,25 @@ export const SkillsSection: React.FC = () => {
   return (
     <SkillSection>
       <SectionTitle>Skills<CyanWrap>.</CyanWrap></SectionTitle>
-      <SkillsContent>What I've learned so far</SkillsContent>
+      <SkillsContent>Technologies I've learned so far</SkillsContent>
       <CategorySection>
         {categories.map((category) => (
           <CategoryContainer key={category._id}>
             <CategoryTitle>{category._id}</CategoryTitle>
             <SkillsContainer>
               {category.skills.map((skill: SkillType) => (
-                <>
+                <React.Fragment key={skill._id}>
                   <Skill
-                    key={skill._id}
                     onClick={() => handleSkillClick(skill._id)}
                     isActive={skill._id === activeSkillId}
                   >
                     <SkillIcon as={iconMapping[skill.name]} />
                     <SkillName>{skill.name}</SkillName>
-
                   </Skill>
                   {skill._id === activeSkillId && (
                     <SkillDescription>{skill.description}</SkillDescription>
                   )}
-                </>
+                </React.Fragment>
               ))}
             </SkillsContainer>
           </CategoryContainer>

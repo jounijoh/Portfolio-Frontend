@@ -7,19 +7,21 @@ export const HomepageContainer = styled.div`
   align-items: flex-start;
   justify-content: center;
   text-align: left; 
-  height: 100vh;
+  height: 70vh;
+  line-height: ${({ theme }) => theme.lineHeights.heading};
+  
 `;
 
 export const HomepageTitle = styled.h1`
   margin-left: 0.4rem;
-  font-size: clamp(18px, 2.5vw, 20px);
+  font-size: ${({ theme }) => theme.fontSizes.h3};
   color: ${colors.text.gray};
   margin-bottom: 1rem;
 `;
 
 export const HomepageSubtitle = styled.h3`
   color: ${colors.text.lightPurple};
-  font-size: clamp(18px, 2.5vw, 25px);
+  font-size: ${({ theme }) => theme.fontSizes.h3};
   
 `;
 
