@@ -4,7 +4,7 @@ import { useSwipeable } from 'react-swipeable';
 import { FaLinkedin, FaInstagram, FaGithub } from 'react-icons/fa';
 
 
-const SidebarComponent: React.FC = () => {
+export const SidebarComponent: React.FC = () => {
   // Make sidebar visible by default on desktop and hidden on mobile
   // Swible left to hide and right to show on mobile
 
@@ -43,4 +43,3 @@ const SidebarComponent: React.FC = () => {
   );
 };
 
-export default SidebarComponent;

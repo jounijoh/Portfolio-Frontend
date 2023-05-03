@@ -9,13 +9,11 @@ export const ContactContainer = styled.div`
         width: 100%;
 `;
 
-
 export const ContactTitle = styled.h2`
   font-size: ${({ theme }) => theme.fontSizes.h2};
   margin-bottom: 1rem;
   margin-top: 4rem;
 `;
-
 
 export const ContactContent = styled.p`
   font-size: ${({ theme }) => theme.fontSizes.body};

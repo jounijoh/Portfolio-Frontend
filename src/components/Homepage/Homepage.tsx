@@ -2,8 +2,6 @@ import React from 'react';
 import { HomepageContainer, HomepageTitle, HomepageSubtitle, Name } from './styles';
 import { CyanWrap } from '../../global/Colors';
 
-
-
 const Homepage: React.FC = () => {
   
   return (

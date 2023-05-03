@@ -1,6 +1,6 @@
 import React from 'react';
-import { LayoutContainer, MainContent, FullHeightSection, AnimatedSection,  } from './styles';
-import SidebarComponent from '../SideBar/SideBar';
+import { LayoutContainer, MainContent, AnimatedSection,  } from './styles';
+import { SidebarComponent } from '../SideBar/SideBar';
 import { Navbar } from '../Navbar/Navbar';
 import Homepage from '../Homepage/Homepage';
 import AboutMe from '../AboutMe/AboutMe';
