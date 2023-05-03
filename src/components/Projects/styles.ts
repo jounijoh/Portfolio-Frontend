@@ -6,7 +6,7 @@ export const ProjectsSectionContainer = styled.div`
   flex-direction: column;
   align-items: flex-start;
   padding: 2rem;
-  height: 70vh;
+  height: 50vh;
 `;
 
 export const ProjectContainer = styled.div<{ reverse?: boolean }>`

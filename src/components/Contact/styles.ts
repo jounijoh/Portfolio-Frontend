@@ -4,6 +4,9 @@ import { colors } from '../../global/Colors';
 export const ContactContainer = styled.div`
     height: 50vh;
     width: 60%;
+
+    @media (max-width: 768px) {
+        width: 100%;
 `;
 
 

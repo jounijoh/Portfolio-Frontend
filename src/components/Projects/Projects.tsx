@@ -28,7 +28,7 @@ export const ProjectsSection: React.FC = () => {
       <ProjectsTitle>
         My Creations<CyanWrap>.</CyanWrap>
       </ProjectsTitle>
-      <ProjectsContent>This section is under constuction... Thank you for your patience.</ProjectsContent>
+      <ProjectsContent>This section is under construction... Thank you for your patience.</ProjectsContent>
       {projects.map((project, index) => (
         <Project
           key={project._id}
