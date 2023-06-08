@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { colors } from '../../global/Colors';
 
 export const ContactContainer = styled.div`
-    height: 50vh;
+    min-height: 50vh;
     width: 60%;
 
     @media (max-width: 768px) {

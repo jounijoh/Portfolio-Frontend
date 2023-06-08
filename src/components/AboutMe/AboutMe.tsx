@@ -7,7 +7,7 @@ import { AboutType } from '../../types';
 const AboutMe: React.FC = () => {
   const [aboutData, setAboutData] = useState<AboutType[]>([]);
   
-  useEffect(() => {
+  //useEffect(() => {
     const fetchContext = async () => {
       try {
         const response = await axios.get(`${import.meta.env.VITE_VERCEL_FETCH_URL}/about`);
@@ -18,7 +18,7 @@ const AboutMe: React.FC = () => {
     };
 
     fetchContext();
-  }, []);
+  //}, []);
 
   return (
     <AboutMeContainer>

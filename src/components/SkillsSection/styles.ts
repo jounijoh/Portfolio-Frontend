@@ -3,7 +3,7 @@ import { colors } from '../../global/Colors';
 
 
 export const SkillSection = styled.section`
-  height: 50vh;
+  min-height: 50vh;
 `;  
 
 export const SectionTitle = styled.h2`
