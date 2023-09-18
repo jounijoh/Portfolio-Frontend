@@ -33,7 +33,6 @@ export const SocialMediaIcons = styled.div`
   margin-top: 1rem;
   height: 10rem;
   
-  postion: sticky;
  // border: 1px solid ${colors.secondary.cyan};
 
   svg {
