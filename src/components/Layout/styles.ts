@@ -55,15 +55,14 @@ const fadeInScaleUp = keyframes`
 `;
 
 export const AnimatedSection = styled.section<{ inView: boolean }>`
-  opacity: 0;
+  opacity: ${({ inView }) => (inView ? 1 : 0)};
   animation: ${({ inView }) =>
     inView ? css`${fadeInUp} 0.3s forwards, ${fadeInScaleUp} 0.3s forwards` : 'none'};
   scroll-margin-top: 10rem;
-
 `;
 
 export const StickyWrapper = styled.div`
-position: sticky;
+  position: sticky;
   top: 150px;
   z-index: 3;
 `;
