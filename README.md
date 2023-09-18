@@ -21,6 +21,12 @@ The portfolio website is built using:
 - **React Router**: For handling page navigation within the app.
 - **Theme Provider**: Used to apply global theming based the `theme.js` file.
 
+## Deployment
+
+The portfolio is live and hosted on Vercel. You can visit the live site at:
+
+[https://portfolio-sand-rho-53.vercel.app/](https://portfolio-sand-rho-53.vercel.app/)
+
 ## Layout and Animation
 
 The portfolio is designed to provide a smooth user experience, with seamless transitions between sections and interactive animations.
@@ -29,9 +35,9 @@ The portfolio is designed to provide a smooth user experience, with seamless tra
 
 - **Layout**: The main container for the application that embeds all sections. It utilizes React's `children` prop to render the content dynamically.
 
-- **Navbar & SidebarComponent**: Essential UI elements for navigation and aesthetics. 
+- **Navbar & SidebarComponent**: Essential UI elements for navigation and aesthetics.
 
-- **AnimatedSection**: This is a critical component in the UI. Each section (Homepage, About, Skills, Projects, Contact) is wrapped inside an `AnimatedSection` to provide dynamic animations when the section is in the viewport. 
+- **AnimatedSection**: This is a critical component in the UI. Each section (Homepage, About, Skills, Projects, Contact) is wrapped inside an `AnimatedSection` to provide dynamic animations when the section is in the viewport.
 
 ### Animations:
 
@@ -56,4 +62,3 @@ The `SkillsSection` component displays the technologies and skills I've learned,
 - **Dynamic UI Interaction**: Clicking on a skill expands its description, providing more context about the selected technology or skill.
 
 - **Responsive Design**: The skills section, along with its components, is designed to be responsive, adjusting seamlessly to mobile and desktop views.
-
