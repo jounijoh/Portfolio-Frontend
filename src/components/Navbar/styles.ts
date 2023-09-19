@@ -6,37 +6,25 @@ export const Container = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 1.1rem 2.5rem 1.1rem 1.8rem;  
   background: ${colors.secondary.veryDarkBlue};
-  //background: linear-gradient(20deg, ${colors.background}, 60%, ${colors.primary});
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
+
+  @media (max-width: 768px) {
+    padding-left: 0.4rem;
+  }
 `;
 
-export const Avatar = styled.img`
-  height: 3rem;
- 
-`;
+export const Logo = styled.img`
+  height: 2.5rem;
 
-// Container to make the avatar image fade into the background
-export const AvatarContainer = styled.div`
-  position: relative;
-  width: 60px; 
-  height: 60px;
-
-  &::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle at center, transparent 50%, ${colors.background} 100%);
-    border-radius: 50%;
-}
+  @media (min-width: 768px) {
+    height: 3rem;
+  }
 `;
 
 interface MenuProps {
@@ -45,6 +33,7 @@ interface MenuProps {
 
 export const Menu = styled.ul<MenuProps>`
   display: flex;
+  align-items: center;
   gap: 1.5rem;
   list-style: none;
   margin: 0;
@@ -87,8 +76,33 @@ export const MobileMenuIcon = styled.button`
   font-size: 1.5rem;
   color: #fff;
   cursor: pointer;
+  z-index: 1001;
 
   @media (max-width: 768px) {
     display: block;
+    z-index: 1000;
   }
+`;
+
+// Download Resume Button
+export const DownloadButton = styled.button`
+    background: transparent;
+    border: 1px solid ${colors.secondary.cyan}; 
+    color: ${colors.text.lightPurple};
+    padding: 0.5rem 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: ${inter.fontFamily};
+    font-weight: ${inter.fontWeight.regular};
+    transition: background 0.3s ease, color 0.3s ease;
+
+    &:hover {
+        background: ${colors.secondary.cyan};
+        color: ${colors.secondary.veryDarkBlue};
+    }
+
+    &:focus {
+        outline: none;
+    }
 `;

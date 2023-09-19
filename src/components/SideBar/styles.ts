@@ -9,15 +9,14 @@ export const Sidebar = styled.aside<{ isVisible: boolean }>`
   bottom: 0;
   color: ${colors.text};
   padding: 2rem;
-  //padding-top: 6.5rem;
   height: 80vh;
-  //border: 1px solid ${colors.secondary.cyan};
+  
 
   @media (max-width: 768px) {
-    padding-top: 4rem;
+    padding-top: 2rem;
     padding-left: 0.5rem;
     padding-right: 1rem;
-    //set visibility to hidden
+    
   }
 
 `;
@@ -55,5 +54,11 @@ export const SocialMediaIcons = styled.div`
   a:nth-child(3) {
     color: white; // GitHub icon color
   }
+
+  @media (min-width: 768px) {
+      font-size: 1.3rem; // adjust this value as per your preference
+    }
+  
+
 `;
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FiMenu, FiX } from 'react-icons/fi';
-import { Avatar, Container, Menu, MenuItem, MobileMenuIcon } from './styles';
+import { Logo, Container, DownloadButton, Menu, MenuItem, MobileMenuIcon } from './styles';
 import { CyanWrap } from '../../global/Colors';
 
 
@@ -11,13 +11,16 @@ export const Navbar: React.FC = () => {
         setMobileMenuOpen(!mobileMenuOpen);
     };
 
+    const downloadResume = () => {
+        window.open('/resume_jouni_johansson.pdf', '_blank');
+    };
+
     return (
         <Container>
             <a href="#homepage">
-            <Avatar src={'/src/assets/images/spacelogo.png'} alt='logo' />
+                <Logo src={'/src/assets/images/J.J-logo.svg'} alt='logo' />
             </a>
-
-            <Menu isOpen={mobileMenuOpen}>
+            <Menu isOpen={mobileMenuOpen} onClick={(e) => e.stopPropagation()}>
                 <MenuItem>
                     <a href="#about" onClick={toggleMobileMenu}>About<CyanWrap> .</CyanWrap></a>
                 </MenuItem>
@@ -29,6 +32,11 @@ export const Navbar: React.FC = () => {
                 </MenuItem>
                 <MenuItem>
                     <a href="#contact" onClick={toggleMobileMenu}>Contact<CyanWrap> .</CyanWrap></a>
+                </MenuItem>
+                <MenuItem>
+                    <DownloadButton onClick={downloadResume}>
+                        Resume
+                    </DownloadButton>
                 </MenuItem>
             </Menu>
             <MobileMenuIcon onClick={toggleMobileMenu}>
