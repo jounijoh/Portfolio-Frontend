@@ -18,7 +18,7 @@ export const Navbar: React.FC = () => {
     return (
         <Container>
             <a href="#homepage">
-                <Logo src={'/src/assets/images/J.J-logo.svg'} alt='logo' />
+                <Logo src={'/images/J.J-logo.svg'} alt='logo' />
             </a>
             <Menu isOpen={mobileMenuOpen} onClick={(e) => e.stopPropagation()}>
                 <MenuItem>
