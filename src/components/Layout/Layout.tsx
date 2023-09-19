@@ -8,12 +8,14 @@ import { SkillsSection } from '../SkillsSection/SkillsSection';
 import { useInView } from 'react-intersection-observer';
 import { ProjectsSection } from '../Projects/Projects';
 import { ContactSection } from '../Contact/Contact';
+import { AboutType } from '../../types';
 
 interface LayoutProps {
   children: React.ReactNode;
+  aboutData: AboutType[];
 }
 
-export const Layout: React.FC<LayoutProps> = ({ children }) => {
+export const Layout: React.FC<LayoutProps> = ({ children, aboutData }) => {
   const [homepageRef, homepageInView] = useInView({ threshold: 0.1, triggerOnce: true });
   const [aboutRef, aboutInView] = useInView({ threshold: 0.7, triggerOnce: true });
   const [skillsRef, skillsInView] = useInView({ threshold: 0.5, triggerOnce: true });
@@ -31,7 +33,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
         </AnimatedSection>
 
         <AnimatedSection id="about" ref={aboutRef} inView={aboutInView}>
-          <AboutMe />
+          <AboutMe data={aboutData} />
         </AnimatedSection>
 
         <AnimatedSection id="skills" ref={skillsRef} inView={skillsInView}>

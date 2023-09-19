@@ -12,28 +12,48 @@ import { RotatingTriangles } from 'react-loader-spinner';
 import { useEffect, useState } from 'react';
 import { StyledSpinnerContainer } from './styles';
 import { colors } from './global/Colors';
+import { AboutType } from './types';
+import axios from 'axios';
 
 function App() {
 
   const [isLoading, setIsLoading] = useState<boolean>(true);
-  const handleDataLoaded = () => {
-    setIsLoading(false);
-  };
+  const [aboutData, setAboutData] = useState<AboutType[]>([]);
+  const [minSpinnerTimeElapsed, setMinSpinnerTimeElapsed] = useState(false);
 
+  // Set minimum time for spinner to be visible
   useEffect(() => {
     const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 2000);  // 2 seconds delay for demonstration
+      setMinSpinnerTimeElapsed(true);
+    }, 2000); // 2 seconds
 
-    return () => clearTimeout(timer); // Cleanup the timeout if component unmounts
+    return () => clearTimeout(timer); // Cleanup the timer if component unmounts
   }, []);
+
+  // Fetch data for About section to time spinner when it's done
+  useEffect(() => {
+    const fetchContext = async () => {
+      try {
+        const response = await axios.get(`${import.meta.env.VITE_VERCEL_FETCH_URL}/about`);
+        setAboutData(response.data);
+        setIsLoading(false);
+      } catch (err) {
+        console.error('Error fetching content for about section:', err);
+        setIsLoading(false);
+      }
+    };
+
+    fetchContext();
+  }, []);
+
+
 
   return (
     <>
       <Router>
         <ThemeProvider theme={theme}>
           <GlobalStyle />
-          {isLoading ? (
+          {isLoading || !minSpinnerTimeElapsed ? (
             <StyledSpinnerContainer>
               <RotatingTriangles
                 visible={true}
@@ -46,10 +66,10 @@ function App() {
               />
             </StyledSpinnerContainer>
           ) : (
-            <Layout>
+            <Layout aboutData={aboutData}>
               <Routes>
                 <Route path="/" element={<Homepage />} />
-                <Route path='/about' element={<AboutMe onDataLoaded={handleDataLoaded} />} />
+                <Route path='/about' element={<AboutMe />} />
                 <Route path='/skills' element={<SkillsSection />} />
                 <Route path='/contact' element={<ContactSection />} />
                 <Route path='*' element={<h1>404</h1>} />
