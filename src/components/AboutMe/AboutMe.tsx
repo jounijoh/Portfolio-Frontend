@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { AboutMeContainer, AboutMeTitle, AboutMeContent } from './styles';
+import { AboutMeContainer, AboutMeTitle, AboutMeContent, ProfileImage, ContentWithImage } from './styles';
 import { CyanWrap } from '../../global/Colors';
 import { AboutType } from '../../types';
+import profilePicture from '/images/profileImg.jpg';
 
 interface AboutMeProps {
   data?: AboutType[];
@@ -9,9 +10,6 @@ interface AboutMeProps {
 
 
 const AboutMe: React.FC<AboutMeProps> = ({ data }) => {
-
-  console.log("Received data:", data);
-
 
   return (
     <AboutMeContainer>
@@ -23,12 +21,22 @@ const AboutMe: React.FC<AboutMeProps> = ({ data }) => {
               <CyanWrap>.</CyanWrap>
             </AboutMeTitle>
           );
-        } else if (item.contentType === 'text') {
-          return <AboutMeContent key={index}>{item.context}</AboutMeContent>;
         } else {
           return null;
         }
       })}
+      <ContentWithImage>
+        <div>
+          {data && data.length > 0 && data.map((item, index) => {
+            if (item.contentType === 'text') {
+              return <AboutMeContent key={index}>{item.context}</AboutMeContent>;
+            } else {
+              return null;
+            }
+          })}
+        </div>
+        <ProfileImage src={profilePicture} alt="Jouni Johansson" />
+      </ContentWithImage>
     </AboutMeContainer>
   );
 };

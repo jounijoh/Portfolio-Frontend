@@ -15,7 +15,7 @@ export const Container = styled.nav`
   z-index: 1000;
 
   @media (max-width: 768px) {
-    padding-left: 0.4rem;
+padding-left: 0.4rem 1.3rem;
   }
 `;
 
