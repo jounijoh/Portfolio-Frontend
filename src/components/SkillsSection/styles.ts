@@ -4,7 +4,7 @@ import { colors } from '../../global/Colors';
 
 export const SkillSection = styled.section`
   min-height: 50vh;
-`;  
+`;
 
 export const SectionTitle = styled.h2`
 font-size: ${({ theme }) => theme.fontSizes.h2};
@@ -84,7 +84,7 @@ export const Skill = styled.div<{ isActive: boolean }>`
 export const SkillIcon = styled.span`
   font-size: 1.5rem;
   padding: 0.5rem;
-  //margin-right: 0.5rem;
+  color: ${colors.secondary.cyan};
 `;
 
 export const SkillName = styled.span`

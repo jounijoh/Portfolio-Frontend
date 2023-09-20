@@ -10,30 +10,24 @@ interface AboutMeProps {
 
 
 const AboutMe: React.FC<AboutMeProps> = ({ data }) => {
+  const titleData = data?.find(item => item.contentType === 'title');
 
   return (
     <AboutMeContainer>
-      {data && data.length > 0 && data.map((item, index) => {
-        if (item.contentType === 'title') {
-          return (
-            <AboutMeTitle key={index}>
-              {item.context}
-              <CyanWrap>.</CyanWrap>
-            </AboutMeTitle>
-          );
-        } else {
-          return null;
-        }
-      })}
+      {titleData && (
+        <AboutMeTitle key={titleData._id}>
+          {titleData.context}
+          <CyanWrap>.</CyanWrap>
+        </AboutMeTitle>
+      )}
+
       <ContentWithImage>
         <div>
-          {data && data.length > 0 && data.map((item, index) => {
-            if (item.contentType === 'text') {
-              return <AboutMeContent key={index}>{item.context}</AboutMeContent>;
-            } else {
-              return null;
-            }
-          })}
+          {data?.filter(item => item.contentType === 'text').map((item) => (
+            <AboutMeContent key={item._id}>
+              {item.context}
+            </AboutMeContent>
+          ))}
         </div>
         <ProfileImage src={profilePicture} alt="Jouni Johansson" />
       </ContentWithImage>

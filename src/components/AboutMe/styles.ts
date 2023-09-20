@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { colors } from '../../global/Colors';
 
 export const AboutMeContainer = styled.section`
-    min-height: 40vh;
+    min-height: 50vh;
     display: flex;
     flex-direction: column;
     align-items: flex-start;

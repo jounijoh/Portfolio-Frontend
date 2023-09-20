@@ -2,11 +2,12 @@ import styled from 'styled-components';
 import { colors } from '../../global/Colors';
 
 export const ContactContainer = styled.div`
-    min-height: 50vh;
-    width: 60%;
+  min-height: 50vh;
+  width: 60%;
 
-    @media (max-width: 768px) {
-        width: 100%;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 export const ContactTitle = styled.h2`
@@ -21,17 +22,28 @@ export const ContactContent = styled.p`
   line-height: ${({ theme }) => theme.lineHeights.body};
 `;
 
-export const MailButton = styled.button`
-  //background-color: #4caf50; /* Green */
+export const ButtonsContainer = styled.div`
+  display: flex;
+  gap: 8px; // Spacing between the buttons
+`;
+
+export const Button = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
   border: 1px solid ${colors.secondary.cyan};
+  width: 150px; 
+  height: 40px;
   color: white;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
   font-size: 16px;
-  margin: 4px 2px;
+  margin: 4px;
+  font: inherit;
+  box-sizing: border-box;
+
   cursor: pointer;
-  padding: 10px 24px;
   border-radius: 4px;
   transition-duration: 0.4s;
 
