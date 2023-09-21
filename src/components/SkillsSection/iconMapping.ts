@@ -1,9 +1,18 @@
 import { IconType } from 'react-icons';
-import { FaJsSquare, FaNodeJs, } from 'react-icons/fa';
-import { SiTypescript, SiStyledcomponents, SiReactrouter ,SiExpress, SiMariadb, SiMongodb,  SiFirebase, SiMicrosoftazure, SiTailwindcss } from 'react-icons/si';
+import { FaJsSquare, FaNodeJs, FaExternalLinkAlt } from 'react-icons/fa';
+import {
+    SiTypescript,
+    SiStyledcomponents,
+    SiExpress,
+    SiMongodb,
+    SiFirebase,
+    SiMicrosoftazure,
+    SiTailwindcss
+}
+    from 'react-icons/si';
 import { DiJava, DiPython, DiReact, DiScrum, DiHtml5, DiGithubBadge, DiCss3, } from "react-icons/di";
 import { TbSql } from 'react-icons/tb';
-
+import { FiGithub } from 'react-icons/fi';
 
 export const iconMapping: { [key: string]: IconType } = {
     React: DiReact,
@@ -25,4 +34,6 @@ export const iconMapping: { [key: string]: IconType } = {
     CSS: DiCss3,
     'Tailwind CSS': SiTailwindcss,
     'Styled Components': SiStyledcomponents,
+    Link: FaExternalLinkAlt,
+    GitHubLink: FiGithub,
 };

@@ -4,6 +4,10 @@ import { colors } from '../../global/Colors';
 
 export const SkillSection = styled.section`
   min-height: 50vh;
+
+  @media (max-width: 767px) {
+        min-height: 40vh;
+    }
 `;
 
 export const SectionTitle = styled.h2`
@@ -15,6 +19,7 @@ font-size: ${({ theme }) => theme.fontSizes.h2};
 export const CategorySection = styled.section`
   display: flex;
   flex-direction: row;
+  
   @media (max-width: 768px) {
     flex-direction: column;
     gap: 1px;
@@ -44,6 +49,10 @@ export const CategoryTitle = styled.h3`
   font-size: 1rem;
   margin-right: 2rem;
   color: ${colors.text.lighterPurple};
+
+  @media (max-width: 768px) { 
+    margin-right: 0rem;
+  }
 `;
 
 export const SkillsContainer = styled.div`
@@ -85,6 +94,12 @@ export const SkillIcon = styled.span`
   font-size: 1.5rem;
   padding: 0.5rem;
   color: ${colors.secondary.cyan};
+
+  
+  @media (max-width: 768px) {
+    font-size: 1.4rem;
+    padding: 0.3rem;
+  }
 `;
 
 export const SkillName = styled.span`

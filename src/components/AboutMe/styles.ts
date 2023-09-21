@@ -7,6 +7,10 @@ export const AboutMeContainer = styled.section`
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
+
+    @media (max-width: 767px) {
+        min-height: 40vh;
+    }
 `;
 
 

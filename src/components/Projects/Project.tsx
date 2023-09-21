@@ -1,9 +1,22 @@
 import React from 'react';
-import { ProjectContainer, ProjectImage, ProjectInfo } from './styles';
+import {
+  ContentContainer,
+  DescriptionContainer,
+  ImageContainer,
+  InfoWrapper,
+  LinkIcon,
+  LinkIconContainer,
+  LinksAndSkillsContainer,
+  ProjectContainer,
+  ProjectImage,
+  ProjectName,
+  SkillsContainer,
+  SkillIcon
+} from './styles';
 import { SkillType } from '../../types';
-import { SkillIcon } from '../SkillsSection/styles';
-import { SkillsContainer } from './styles';
+import { } from './styles';
 import { iconMapping } from '../SkillsSection/iconMapping';
+import { IconType } from 'react-icons';
 
 interface Link {
   title?: string;
@@ -21,43 +34,53 @@ interface ProjectProps {
 }
 
 export const Project: React.FC<ProjectProps> = ({ name, description, skills, imageSrc, links, reverse }) => {
+
   return (
     <ProjectContainer reverse={reverse}>
-      <ProjectImage src={imageSrc} alt={name} />
-      <ProjectInfo>
-        <h3>{name}</h3>
-        <p>{description}</p>
+      <ProjectName>{name}</ProjectName>
+      <ContentContainer>
+        <ImageContainer>
+          <ProjectImage src={imageSrc} alt={name} />
+        </ImageContainer>
+        <DescriptionContainer>
+          <p>{description}</p>
+        </DescriptionContainer>
+      </ContentContainer>
+
+      <LinksAndSkillsContainer>
         {skills && (
-          <>
-            <h4>Technologies used:</h4>
+          <InfoWrapper>
+            <h4>Tech:</h4>
             <SkillsContainer>
               {skills.map((skill, index) => (
                 <SkillIcon as={iconMapping[skill.name]} title={skill.name} />
               ))}
             </SkillsContainer>
-          </>
+          </InfoWrapper>
         )}
         {links && (
-          <>
+          <InfoWrapper>
             <h4>Links:</h4>
-            <ul>
-              {links.map((link, index) => (
-                <li key={index}>
-                  {link.title ? (
-                    <a href={link.url} target="_blank" rel="noopener noreferrer">
-                      {link.title}
-                    </a>
-                  ) : (
-                    <a href={link.url} target="_blank" rel="noopener noreferrer">
-                      {link.url}
-                    </a>
-                  )}
-                </li>
-              ))}
-            </ul>
-          </>
+            <LinkIconContainer>
+              {links.map((link, index) => {
+                let IconComponent: IconType | null = null;
+                if (link.title === "GitHub") {
+                  IconComponent = iconMapping["GitHubLink"];
+                } else if (link.title === "External link") {
+                  IconComponent = iconMapping["Link"];
+                }
+
+                return (
+                  <LinkIcon key={index} href={link.url} target="_blank" rel="noopener noreferrer">
+                    {IconComponent && <IconComponent title={link.title} />}
+                  </LinkIcon>
+                );
+              })}
+            </LinkIconContainer>
+
+          </InfoWrapper>
         )}
-      </ProjectInfo>
+      </LinksAndSkillsContainer>
     </ProjectContainer>
   );
 };

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { ProjectsContent, ProjectsSectionContainer, ProjectsTitle } from './styles';
+import { ProjectsContent, ProjectsSectionContainer, ProjectsTitle, ProjectName } from './styles';
 import { Project } from './Project';
 import { CyanWrap } from '../../global/Colors';
 import axios from 'axios';
