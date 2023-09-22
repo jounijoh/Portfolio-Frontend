@@ -25,7 +25,9 @@ The portfolio website is built using:
 
 The portfolio is live and hosted on Vercel. You can visit the live site at:
 
-[https://portfolio-sand-rho-53.vercel.app/](https://portfolio-sand-rho-53.vercel.app/)
+[https://portfolio-jounijoh.vercel.app/](https://portfolio-jounijoh.vercel.app/)
+
+The backend repostiory can be found here: [Backend Rep](https://github.com/jounijoh/Portfolio-Backend)
 
 ## Layout and Animation
 
@@ -37,7 +39,7 @@ The portfolio is designed to provide a smooth user experience, with seamless tra
 
 - **Navbar & SidebarComponent**: Essential UI elements for navigation and aesthetics.
 
-- **AnimatedSection**: This is a critical component in the UI. Each section (Homepage, About, Skills, Projects, Contact) is wrapped inside an `AnimatedSection` to provide dynamic animations when the section is in the viewport.
+- **AnimatedSection**: This is a critical component in the UI. Each section is wrapped inside an `AnimatedSection` to provide dynamic animations when the section is in the viewport.
 
 ### Animations:
 
@@ -57,8 +59,8 @@ The main App component sets up the global styles, routing, and overall layout of
 
 The `SkillsSection` component displays the technologies and skills I've learned, organized by categories. This section fetches the skills data from a backend service (specified by an environment variable) and displays them using styled components.
 
-- **Fetching Data**: Skills data is fetched from a backend service using Axios. The URL for this service is provided by an environment variable `VITE_VERCEL_FETCH_URL`.
+- **Fetching Data**: All content data is fetched from a backend service using Axios. 
 
 - **Dynamic UI Interaction**: Clicking on a skill expands its description, providing more context about the selected technology or skill.
 
-- **Responsive Design**: The skills section, along with its components, is designed to be responsive, adjusting seamlessly to mobile and desktop views.
+- **Responsive Design**: All sections, along with their components, are designed to be responsive, adjusting seamlessly to mobile and desktop views.
