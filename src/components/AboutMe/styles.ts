@@ -3,10 +3,13 @@ import { colors } from '../../global/Colors';
 
 export const AboutMeContainer = styled.section`
     min-height: 50vh;
+    max-width: 800px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
+    margin: 0 auto;
+    margin-bottom: 4rem;
 
     @media (max-width: 767px) {
         min-height: 40vh;

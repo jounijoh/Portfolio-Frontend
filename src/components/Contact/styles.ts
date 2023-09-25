@@ -3,7 +3,8 @@ import { colors } from '../../global/Colors';
 
 export const ContactContainer = styled.div`
   min-height: 50vh;
-  width: 60%;
+  max-width: 400px;
+  margin: 0 auto;
 
   @media (max-width: 768px) {
     width: 100%;

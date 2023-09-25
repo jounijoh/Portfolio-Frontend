@@ -3,7 +3,7 @@ import {
   ContentContainer,
   DescriptionContainer,
   ImageContainer,
-  InfoWrapper,
+  TechWrapper,
   LinkIcon,
   LinkIconContainer,
   LinksAndSkillsContainer,
@@ -11,7 +11,8 @@ import {
   ProjectImage,
   ProjectName,
   SkillsContainer,
-  SkillIcon
+  SkillIcon,
+  LinksWrapper
 } from './styles';
 import { SkillType } from '../../types';
 import { } from './styles';
@@ -34,11 +35,10 @@ interface ProjectProps {
 }
 
 export const Project: React.FC<ProjectProps> = ({ name, description, skills, imageSrc, links, reverse }) => {
-
   return (
-    <ProjectContainer reverse={reverse}>
+    <ProjectContainer>
       <ProjectName>{name}</ProjectName>
-      <ContentContainer>
+      <ContentContainer reverse={reverse}>
         <ImageContainer>
           <ProjectImage src={imageSrc} alt={name} />
         </ImageContainer>
@@ -47,20 +47,20 @@ export const Project: React.FC<ProjectProps> = ({ name, description, skills, ima
         </DescriptionContainer>
       </ContentContainer>
 
-      <LinksAndSkillsContainer>
+      <LinksAndSkillsContainer reverse={reverse}>
         {skills && (
-          <InfoWrapper>
-            <h4>Tech:</h4>
+          <TechWrapper>
+            <p>Tech used:</p>
             <SkillsContainer>
               {skills.map((skill, index) => (
                 <SkillIcon as={iconMapping[skill.name]} title={skill.name} />
               ))}
             </SkillsContainer>
-          </InfoWrapper>
+          </TechWrapper>
         )}
         {links && (
-          <InfoWrapper>
-            <h4>Links:</h4>
+          <LinksWrapper>
+            <p>Links:</p>
             <LinkIconContainer>
               {links.map((link, index) => {
                 let IconComponent: IconType | null = null;
@@ -77,8 +77,7 @@ export const Project: React.FC<ProjectProps> = ({ name, description, skills, ima
                 );
               })}
             </LinkIconContainer>
-
-          </InfoWrapper>
+          </LinksWrapper>
         )}
       </LinksAndSkillsContainer>
     </ProjectContainer>

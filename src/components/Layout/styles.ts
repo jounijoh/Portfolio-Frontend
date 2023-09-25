@@ -19,16 +19,21 @@ export const MainContent = styled.main`
   color: ${colors.text.lighterPurple};
   background-color: ${colors.secondary.veryDarkBlue};
   margin-top: 5rem;
-  max-width: 750px;
+  max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
+  padding: 0 1rem;
+ 
  
   overflow-y: visible;
   scroll-behavior: smooth;
 
+  @media (max-width: 1200px) {
+    max-width: 80%; 
+  }
 
   @media (max-width: 768px) {
-    max-width: 90%;
+    max-width: 80%;
     margin-right: auto;
   }
 `;

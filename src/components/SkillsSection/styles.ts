@@ -4,7 +4,9 @@ import { colors } from '../../global/Colors';
 
 export const SkillSection = styled.section`
   min-height: 50vh;
-
+  max-width: 800px;
+  margin: 0 auto;
+  margin-bottom: 4rem;
   @media (max-width: 767px) {
         min-height: 40vh;
     }

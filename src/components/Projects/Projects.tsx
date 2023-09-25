@@ -26,7 +26,7 @@ export const ProjectsSection: React.FC = () => {
   return (
     <ProjectsSectionContainer>
       <ProjectsTitle>
-        My Creations<CyanWrap>.</CyanWrap>
+        My Projects<CyanWrap>.</CyanWrap>
       </ProjectsTitle>
       <ProjectsContent>This section is under construction... Thank you for your patience.</ProjectsContent>
       {projects.map((project, index) => (

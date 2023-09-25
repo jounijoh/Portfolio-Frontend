@@ -9,13 +9,8 @@ export const HomepageContainer = styled.div`
   text-align: left; 
   height: 65vh;
   line-height: ${({ theme }) => theme.lineHeights.heading};
-
-  & > div {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-  }
+  max-width: 900px;
+  margin: 0 auto;
 `;
 
 export const HomepageTitle = styled.h1`
