@@ -12,7 +12,7 @@ import {
   ProjectName,
   SkillsContainer,
   SkillIcon,
-  LinksWrapper
+  LinksWrapper,
 } from './styles';
 import { SkillType } from '../../types';
 import { } from './styles';
@@ -35,13 +35,32 @@ interface ProjectProps {
 }
 
 export const Project: React.FC<ProjectProps> = ({ name, description, skills, imageSrc, links, reverse }) => {
+
+  // Find the external link from the links array
+  const externalLink = links?.find(link => link.title === "External link");
+
+  // Find the GitHub link from the links array
+  const gitHubLink = links?.find(link => link.title === "GitHub");
+
+  // Conditional rendering of ProjectImage with or without the link
+  const RenderedImage = externalLink ? (
+
+    <ImageContainer href={externalLink.url} target="_blank" rel="noopener noreferrer">
+      <ProjectImage src={imageSrc} alt={name} />
+    </ImageContainer>
+  ) : (
+    <ImageContainer href={gitHubLink?.url} target="_blank" rel="noopener noreferrer">
+      <ProjectImage src={imageSrc} alt={name} />
+    </ImageContainer>
+
+  );
+
+
   return (
     <ProjectContainer>
       <ProjectName>{name}</ProjectName>
       <ContentContainer reverse={reverse}>
-        <ImageContainer>
-          <ProjectImage src={imageSrc} alt={name} />
-        </ImageContainer>
+        {RenderedImage}
         <DescriptionContainer>
           <p>{description}</p>
         </DescriptionContainer>

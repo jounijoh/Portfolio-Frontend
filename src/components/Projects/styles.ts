@@ -18,6 +18,7 @@ export const ProjectContainer = styled.div`
   align-items: flex-start;
   max-width: 100%;
   margin-bottom: 4rem;
+;
 
   @media (max-width: 768px) {
     text-align: center;
@@ -56,10 +57,10 @@ export const ProjectImage = styled.img`
   }
 `;
 
-export const ImageContainer = styled.div`
+export const ImageContainer = styled.a`
   position: relative;
   flex: 1;
-  max-width: 50%;
+  width: 50%;
   margin-right: 1rem;
   border-radius: 5px;
 
@@ -87,6 +88,13 @@ export const ImageContainer = styled.div`
   }
 `;
 
+export const StyledImageLink = styled.a`
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  max-width: 50%;
+`;
+
 // DESCRIPTION
 export const DescriptionContainer = styled.div`
   position: relative;
@@ -94,6 +102,10 @@ export const DescriptionContainer = styled.div`
   margin-right: 1rem;
   border-radius: 5px;
   background-color: rgba(225,48,108,0.07);
+
+  & > p {
+    margin: 15px; // Adjust the margin as per your needs
+  }
 
   @media (max-width: 768px) {
     background-color: rgba(0,255,255,0.05);
@@ -209,4 +221,14 @@ export const LinkIcon = styled.a`
   &:hover {
     color: ${colors.secondary.cyan};
   }
+`;
+
+// LOADING SPINNER
+export const StyledSpinnerContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
 `;

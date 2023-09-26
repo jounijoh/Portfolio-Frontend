@@ -25,7 +25,7 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setMinSpinnerTimeElapsed(true);
-    }, 2000); // 2 seconds
+    }, 1000); // 1 seconds
 
     return () => clearTimeout(timer); // Cleanup the timer if component unmounts
   }, []);
