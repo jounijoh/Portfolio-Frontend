@@ -1,11 +1,17 @@
 import React, { useEffect, useState } from 'react';
-import { ProjectsContent, ProjectsSectionContainer, ProjectsTitle, ProjectName, StyledSpinnerContainer } from './styles';
+import { 
+  Button, 
+  ProjectsContent, 
+  ProjectsSectionContainer, 
+  ProjectsTitle, 
+  StyledSpinnerContainer } from './styles';
 import { Project } from './Project';
 import { CyanWrap } from '../../global/Colors';
 import axios from 'axios';
 import { ProjectType } from '../../types';
 import { RotatingTriangles } from 'react-loader-spinner';
 import { colors } from '../../global/Colors';
+
 
 export const ProjectsSection: React.FC = () => {
   const [projects, setProjects] = useState<ProjectType[]>([]);
@@ -27,7 +33,9 @@ export const ProjectsSection: React.FC = () => {
     fetchContext();
   }, []);
 
-
+  const handleButtonClick = () => {
+    window.location.href = "https://github.com/jounijoh";
+  };
 
   return (
     <ProjectsSectionContainer>
@@ -48,7 +56,7 @@ export const ProjectsSection: React.FC = () => {
       ) : (
         <>
           <ProjectsContent>
-            This section is under construction... Thank you for your patience.
+            Some projects I have worked on
           </ProjectsContent>
           {projects.map((project, index) => (
             <Project
@@ -63,6 +71,7 @@ export const ProjectsSection: React.FC = () => {
           ))}
         </>
       )}
+      <Button onClick={handleButtonClick}>See more projects in my GitHub</Button>
     </ProjectsSectionContainer>
   );
 };

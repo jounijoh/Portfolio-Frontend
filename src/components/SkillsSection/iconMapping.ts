@@ -7,11 +7,15 @@ import {
     SiMongodb,
     SiFirebase,
     SiMicrosoftazure,
-    SiTailwindcss
+    SiTailwindcss,
+    SiDocker,
+    SiSocketdotio,
+    SiOpenai,
+    SiMui,
 }
     from 'react-icons/si';
 import { DiJava, DiPython, DiReact, DiScrum, DiHtml5, DiGithubBadge, DiCss3, } from "react-icons/di";
-import { TbSql } from 'react-icons/tb';
+import { TbSql, TbBrandNextjs, TbApi } from 'react-icons/tb';
 import { FiGithub } from 'react-icons/fi';
 
 export const iconMapping: { [key: string]: IconType } = {
@@ -36,4 +40,10 @@ export const iconMapping: { [key: string]: IconType } = {
     'Styled Components': SiStyledcomponents,
     Link: FaExternalLinkAlt,
     GitHubLink: FiGithub,
+    Docker: SiDocker,
+    'Socket.IO': SiSocketdotio,
+    'OpenAI': SiOpenai,
+    'Next.js': TbBrandNextjs,
+    'Material UI': SiMui,
+    'REST API': TbApi,
 };

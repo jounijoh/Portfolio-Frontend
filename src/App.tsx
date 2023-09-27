@@ -10,10 +10,43 @@ import { SkillsSection } from './components/SkillsSection/SkillsSection';
 import { ContactSection } from './components/Contact/Contact';
 import { RotatingTriangles } from 'react-loader-spinner';
 import { useEffect, useState } from 'react';
-import { StyledSpinnerContainer } from './styles';
 import { colors } from './global/Colors';
 import { AboutType } from './types';
 import axios from 'axios';
+import { CyanWrap } from './global/Colors';
+import styled from 'styled-components';
+
+
+// STYLES FOR SPINNER AND LOADING TEXT
+const StyledSpinnerContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+`;
+
+const LoadingTextWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: ${colors.text.lighterPurple};
+`;
+
+const LongLoadingTextWrapper = styled.div`
+   margin-top: 0;
+    margin-left: 10%;
+    margin-right: 10%;
+    align-self: flex-start;
+`;
+
+const SpinnerWrapper = styled.div`
+`;
+
 
 function App() {
 
@@ -55,15 +88,31 @@ function App() {
           <GlobalStyle />
           {isLoading || !minSpinnerTimeElapsed ? (
             <StyledSpinnerContainer>
-              <RotatingTriangles
-                visible={true}
-                height="150"
-                width="150"
-                ariaLabel="rotating-triangels-loading"
-                wrapperStyle={{}}
-                wrapperClass="rotating-triangels-wrapper"
-                colors={[colors.secondary.cyan, '#e1306c', colors.text.lightPurple]}
-              />
+              <SpinnerWrapper>
+                <RotatingTriangles
+                  visible={true}
+                  height="150"
+                  width="150"
+                  ariaLabel="rotating-triangels-loading"
+                  wrapperStyle={{}}
+                  wrapperClass="rotating-triangels-wrapper"
+                  colors={[colors.secondary.cyan, '#e1306c', colors.text.lightPurple]}
+                />
+              </SpinnerWrapper>
+              <LoadingTextWrapper>
+                <p>
+                  Loading content, please wait..
+                  <CyanWrap>.</CyanWrap>
+                </p>
+                <LongLoadingTextWrapper>
+                  {minSpinnerTimeElapsed && (
+                    <p>
+                      This might take a while as the host for my site is free to use, lazy, and likes to sleep when not feeling useful
+                      <CyanWrap>.</CyanWrap>
+                    </p>
+                  )}
+                </LongLoadingTextWrapper>
+              </LoadingTextWrapper>
             </StyledSpinnerContainer>
           ) : (
             <Layout aboutData={aboutData}>

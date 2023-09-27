@@ -40,7 +40,8 @@ export const AboutMeContent = styled.p`
 `;
 
 export const ProfileImage = styled.img`
-    height: 350px;
+    
+    max-width: 30%;
     margin: 1.5rem 1rem 1rem 1rem;
     margin-left: 2rem;
 

@@ -4,7 +4,7 @@ import { colors } from '../../global/Colors';
 export const ProjectsSectionContainer = styled.section`
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   min-height: 50vh;
   width: 100%;
   margin: 0 auto; 
@@ -25,6 +25,7 @@ export const ProjectContainer = styled.div`
   }
 
 `;
+
 export const ContentContainer = styled.div<{ reverse?: boolean }> `
   display: flex;
   justify-content: space-between;
@@ -34,12 +35,6 @@ export const ContentContainer = styled.div<{ reverse?: boolean }> `
   @media (max-width: 768px) {
     flex-direction: column;
   }
-`;
-
-export const ProjectsContent = styled.p`
-  font-size: ${({ theme }) => theme.fontSizes.body};
-  color: ${colors.text.lightPurple};
-  line-height: 1.5;
 `;
 
 // IMAGE
@@ -102,9 +97,14 @@ export const DescriptionContainer = styled.div`
   margin-right: 1rem;
   border-radius: 5px;
   background-color: rgba(225,48,108,0.07);
+  display: flex;
+  align-items: center; // For vertical centering
+  justify-content: center; // For horizontal centering
+  flex-direction: column; // Stack children vertically
 
   & > p {
     margin: 15px; // Adjust the margin as per your needs
+    color: white;
   }
 
   @media (max-width: 768px) {
@@ -115,10 +115,21 @@ export const DescriptionContainer = styled.div`
   }
 `;
 
+// SECTION TITLE
 export const ProjectsTitle = styled.h2`
+  align-self: flex-start;
   font-size: ${({ theme }) => theme.fontSizes.h2};
   margin-bottom: 1rem;
-  margin-top: 4rem;
+ 
+`;
+
+// Description for Section
+export const ProjectsContent = styled.p`
+  margin-top: 0;
+  align-self: flex-start;
+  font-size: ${({ theme }) => theme.fontSizes.body};
+  color: ${colors.text.lightPurple};
+  line-height: 1.5;
 `;
 
 export const ProjectName = styled.h3`
@@ -202,6 +213,13 @@ gap: 1rem;
 padding-bottom: 1rem;
 width: 100%;
 
+@media (max-width: 1100px) {
+   gap: 0.5rem;
+  }
+
+  @media (max-width: 900px) {
+   gap: 0.3rem;
+  }  
 `;
 
 // LINKS
@@ -231,4 +249,30 @@ export const StyledSpinnerContainer = styled.div`
     position: fixed;
     top: 0;
     left: 0;
+`;
+// BUTTON for MORE PROJECTS
+export const Button = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: 2px solid ${colors.secondary.cyan};
+  width: 300px; 
+  height: 50px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  margin: 4px;
+  font: inherit;
+  box-sizing: border-box;
+
+  cursor: pointer;
+  border-radius: 4px;
+  transition-duration: 0.4s;
+
+  &:hover {
+    background-color: ${colors.secondary.darkGray};
+    color: ${colors.secondary.cyan};
+  }
 `;
