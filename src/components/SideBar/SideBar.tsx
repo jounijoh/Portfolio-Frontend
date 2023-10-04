@@ -1,31 +1,15 @@
 import React, { useState } from 'react';
-import { Sidebar, SocialMediaIcons,} from './styles';
-import { useSwipeable } from 'react-swipeable';
+import { Sidebar, SocialMediaIcons, } from './styles';
+
 import { FaLinkedin, FaInstagram, FaGithub } from 'react-icons/fa';
 
 
 export const SidebarComponent: React.FC = () => {
-  // Make sidebar visible by default on desktop and hidden on mobile
-  // Swible left to hide and right to show on mobile
-
-  const [isSidebarVisible, setIsSidebarVisible] = useState(false);
-  const handleSwipedLeft = () => {
-    setIsSidebarVisible(false);
-  };
-
-  const handleSwipedRight = () => {
-    setIsSidebarVisible(true);
-  };
-
-  const swipeHandlers = useSwipeable({
-    onSwipedLeft: handleSwipedLeft,
-    onSwipedRight: handleSwipedRight,
-  });
 
   return (
 
-    <Sidebar isVisible={isSidebarVisible} {...swipeHandlers}>
-      
+    <Sidebar>
+
       <SocialMediaIcons>
         <a href="https://www.linkedin.com/in/JouniJohansson" target="_blank" rel="noreferrer">
           <FaLinkedin />
@@ -37,7 +21,7 @@ export const SidebarComponent: React.FC = () => {
           <FaGithub />
         </a>
       </SocialMediaIcons>
-  
+
     </Sidebar>
 
   );

@@ -112,7 +112,13 @@ export const DescriptionContainer = styled.div`
     width: 100%;
     max-width: 100%; // Ensure the image can take full width on smaller screens
     margin-right: 0;
+    align-items: flex-start;
+    
+    & > p {
+    text-align: left;  // Text is left-aligned on smaller screens
   }
+  }
+  
 `;
 
 // SECTION TITLE
@@ -241,15 +247,6 @@ export const LinkIcon = styled.a`
   }
 `;
 
-// LOADING SPINNER
-export const StyledSpinnerContainer = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-`;
 // BUTTON for MORE PROJECTS
 export const Button = styled.button`
   display: flex;
@@ -257,7 +254,7 @@ export const Button = styled.button`
   justify-content: center;
   background-color: transparent;
   border: 2px solid ${colors.secondary.cyan};
-  width: 300px; 
+  max-width: 300px; 
   height: 50px;
   color: white;
   text-align: center;
@@ -266,7 +263,7 @@ export const Button = styled.button`
   margin: 4px;
   font: inherit;
   box-sizing: border-box;
-
+  padding: 1rem;
   cursor: pointer;
   border-radius: 4px;
   transition-duration: 0.4s;

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { colors } from '../../global/Colors';
 
-export const Sidebar = styled.aside<{ isVisible: boolean }>`
+export const Sidebar = styled.aside`
   width: min(5%, 15px);
   background: ${colors.secondary.veryDarkBlue};
   position: sticky;
@@ -16,7 +16,7 @@ export const Sidebar = styled.aside<{ isVisible: boolean }>`
     padding-top: 2rem;
     padding-left: 0.5rem;
     padding-right: 1rem;
-    
+    display: none;
   }
 
 `;

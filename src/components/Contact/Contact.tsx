@@ -1,6 +1,7 @@
 import React from 'react';
-import { ContactTitle, ContactContainer, ContactContent, Button, ButtonsContainer } from './styles';
+import { ContactTitle, ContactContainer, ContactContent, Button, ButtonsContainer, SocialMediaIcons } from './styles';
 import { CyanWrap } from '../../global/Colors';
+import { FaLinkedin, FaInstagram, FaGithub } from 'react-icons/fa';
 
 export const ContactSection: React.FC = () => {
 
@@ -22,6 +23,17 @@ export const ContactSection: React.FC = () => {
                     Resume
                 </Button>
             </ButtonsContainer>
+            <SocialMediaIcons>
+                <a href="https://www.linkedin.com/in/JouniJohansson" target="_blank" rel="noreferrer">
+                    <FaLinkedin />
+                </a>
+                <a href="https://www.instagram.com/jounijoh" target="_blank" rel="noreferrer">
+                    <FaInstagram />
+                </a>
+                <a href="https://www.github.com/jounijoh" target="_blank" rel="noreferrer">
+                    <FaGithub />
+                </a>
+            </SocialMediaIcons>
         </ContactContainer>
     );
 };

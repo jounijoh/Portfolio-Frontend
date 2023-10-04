@@ -7,8 +7,10 @@ export const SkillSection = styled.section`
   max-width: 800px;
   margin: 0 auto;
   margin-bottom: 4rem;
+
   @media (max-width: 767px) {
         min-height: 40vh;
+        max-width: 100%;
     }
 `;
 
@@ -21,10 +23,10 @@ font-size: ${({ theme }) => theme.fontSizes.h2};
 export const CategorySection = styled.section`
   display: flex;
   flex-direction: row;
+ 
   
   @media (max-width: 768px) {
     flex-direction: column;
-    gap: 1px;
   }
 `;
 
@@ -38,11 +40,10 @@ export const CategoryContainer = styled.div`
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   width: 100%;
   margin-bottom: 1.5rem;
-  margin-right: 2rem;
 
   @media (max-width: 768px) {
     padding: 0.1rem;
-   max-width: 90%;
+ 
    text-align: center;
    margin-right: 0rem;
   }
