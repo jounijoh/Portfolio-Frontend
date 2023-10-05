@@ -13,9 +13,12 @@ export const Container = styled.nav`
   left: 0;
   right: 0;
   z-index: 1000;
+  height: 4rem;
+
 
   @media (max-width: 768px) {
-padding-left: 0.4rem 1.3rem;
+   padding: 0;
+   padding-left: 1rem;
   }
 `;
 

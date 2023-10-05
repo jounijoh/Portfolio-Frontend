@@ -18,7 +18,7 @@ export const ProjectContainer = styled.div`
   align-items: flex-start;
   max-width: 100%;
   margin-bottom: 4rem;
-;
+
 
   @media (max-width: 768px) {
     text-align: center;

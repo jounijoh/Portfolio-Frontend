@@ -19,7 +19,7 @@ export const Layout: React.FC<LayoutProps> = ({ children, aboutData }) => {
   const [homepageRef, homepageInView] = useInView({ threshold: 0.1, triggerOnce: true });
   const [aboutRef, aboutInView] = useInView({ threshold: 0.7, triggerOnce: true });
   const [skillsRef, skillsInView] = useInView({ threshold: 0.5, triggerOnce: true });
-  const [projectsRef, projectsInView] = useInView({ threshold: 0.2, triggerOnce: true });
+  const [projectsRef, projectsInView] = useInView({ threshold: 0.07, triggerOnce: true });
   const [contactRef, contactInView] = useInView({ threshold: 0.5, triggerOnce: true });
 
   return (

@@ -67,39 +67,39 @@ export const Button = styled.button`
 `;
 
 export const SocialMediaIcons = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-items: center;
-  margin: 0 auto;
-  width: 40%;
-  height: 10rem;
-  
-  svg {
-    transition: color 0.3s;
+  display: none;
 
-    &:hover {
-      color: ${colors.secondary.cyan};
-      transform: scale(1.4);
+    @media (max-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 auto;
+    width: 60%;
+    height: 10rem;
+    
+    svg {
+      transition: color 0.3s;
+
+      &:hover {
+        color: ${colors.secondary.cyan};
+        transform: scale(1.4);
+      }
     }
-  }
 
-  a:nth-child(1) {
-    color: #0077b5; // LinkedIn icon color
-  }
-
-  a:nth-child(2) {
-    color: #e1306c; // Instagram icon color
-  }
-
-  a:nth-child(3) {
-    color: white; // GitHub icon color
-  }
-
-  @media (min-width: 768px) {
-      font-size: 1.3rem; // adjust this value as per your preference
+    a:nth-child(1) {
+      color: #0077b5; // LinkedIn icon color
     }
-  
+
+    a:nth-child(2) {
+      color: #e1306c; // Instagram icon color
+    }
+
+    a:nth-child(3) {
+      color: white; // GitHub icon color
+    }
+
+  }
 
 `;

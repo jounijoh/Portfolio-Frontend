@@ -71,8 +71,8 @@ export const Project: React.FC<ProjectProps> = ({ name, description, skills, ima
           <TechWrapper>
             <p>Tech used:</p>
             <SkillsContainer>
-              {skills.map((skill, index) => (
-                <SkillIcon as={iconMapping[skill.name]} title={skill.name} />
+              {skills.map((skill) => (
+                <SkillIcon key={skill._id} as={iconMapping[skill.name]} title={skill.name} />
               ))}
             </SkillsContainer>
           </TechWrapper>
@@ -90,7 +90,7 @@ export const Project: React.FC<ProjectProps> = ({ name, description, skills, ima
                 }
 
                 return (
-                  <LinkIcon key={index} href={link.url} target="_blank" rel="noopener noreferrer">
+                  <LinkIcon key={link.url} href={link.url} target="_blank" rel="noopener noreferrer">
                     {IconComponent && <IconComponent title={link.title} />}
                   </LinkIcon>
                 );
