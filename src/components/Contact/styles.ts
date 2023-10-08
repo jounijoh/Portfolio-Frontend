@@ -16,6 +16,7 @@ export const ContactTitle = styled.h2`
   font-size: ${({ theme }) => theme.fontSizes.h2};
   margin-bottom: 1rem;
   margin-top: 15rem;
+  text-align: center;
 
   @media (max-width: 768px) {
     text-align: center;  // Center text on mobile

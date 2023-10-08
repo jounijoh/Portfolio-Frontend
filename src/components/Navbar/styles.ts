@@ -13,7 +13,7 @@ export const Container = styled.nav`
   left: 0;
   right: 0;
   z-index: 1000;
-  height: 4rem;
+  height: 3rem;
 
 
   @media (max-width: 768px) {

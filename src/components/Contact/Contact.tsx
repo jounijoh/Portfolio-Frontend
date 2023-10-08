@@ -2,12 +2,10 @@ import React from 'react';
 import { ContactTitle, ContactContainer, ContactContent, Button, ButtonsContainer, SocialMediaIcons } from './styles';
 import { CyanWrap } from '../../global/Colors';
 import { FaLinkedin, FaInstagram, FaGithub } from 'react-icons/fa';
+import { downloadResume } from '../downloadResume';
+
 
 export const ContactSection: React.FC = () => {
-
-    const downloadResume = () => {
-        window.open('/resume_jouni_johansson.pdf', '_blank');
-    };
 
     return (
         <ContactContainer>

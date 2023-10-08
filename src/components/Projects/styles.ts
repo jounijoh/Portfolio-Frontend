@@ -126,7 +126,7 @@ export const ProjectsTitle = styled.h2`
   align-self: flex-start;
   font-size: ${({ theme }) => theme.fontSizes.h2};
   margin-bottom: 1rem;
- 
+
 `;
 
 // Description for Section
@@ -141,7 +141,7 @@ export const ProjectsContent = styled.p`
 export const ProjectName = styled.h3`
   align-self: center;
   font-size: ${({ theme }) => theme.fontSizes.h3};
-  color: white;
+  color: ${colors.text.lighterPurple};
 
 `;
 

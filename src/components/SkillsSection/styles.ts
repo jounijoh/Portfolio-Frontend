@@ -6,11 +6,12 @@ export const SkillSection = styled.section`
   min-height: 50vh;
   max-width: 800px;
   margin: 0 auto;
-  margin-bottom: 4rem;
+  margin-bottom: 10rem;
 
   @media (max-width: 767px) {
         min-height: 40vh;
         max-width: 100%;
+        margin-bottom: 4rem;
     }
 `;
 
