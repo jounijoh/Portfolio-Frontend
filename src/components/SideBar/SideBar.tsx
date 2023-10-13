@@ -17,7 +17,7 @@ export const SidebarComponent: React.FC = () => {
         <a href="https://www.instagram.com/jounijoh" target="_blank" rel="noreferrer">
           <FaInstagram />
         </a>
-        <a href="https://www.github.com/jounijoh" target="_blank" rel="noreferrer">
+        <a href="https://www.github.com/jounijo" target="_blank" rel="noreferrer">
           <FaGithub />
         </a>
       </SocialMediaIcons>
